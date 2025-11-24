@@ -6,6 +6,10 @@ window.onload = function() {
     colorsbutton.onclick = changeColors;
     var squarearea = document.getElementById("squarearea");
     var squareCount = parseInt(Math.random() *21)+30
+    // 3 updated onload to incorporate add square function
+    for (let i = 0; i < squareCount; i++) {
+        addSquare();
+    }
 
 
 

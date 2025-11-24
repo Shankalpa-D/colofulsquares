@@ -1,7 +1,8 @@
+var zIndex = 1;
 window.onload = function() {
     var add = this.document.getElementById("add");
     add.onclick = addSquare;
-    // 1 add color button
+    // 2 Change color button
     var colorsbutton = this.document.getElementById("colors");
     colorsbutton.onclick = changeColors;
     var squarearea = document.getElementById("squarearea");
@@ -31,7 +32,7 @@ function getRandonColor() {
         result += possibilities.charAt(parseInt(Math.random() * possibilities.length));}
     return result;
 };
-
+//1 Add Squares
 function addSquare() {
     var squarearea = document.getElementById("squarearea");
     var newSquare = document.createElement("div");
@@ -42,6 +43,11 @@ function addSquare() {
     // 5) random square size 
     newSquare.style.width = parseInt(Math.random() * 10) + 45 + "px";
     newSquare.style.height = parseInt(Math.random() * 10) + 45 + "px";
+
+    //4) add z index 
+    // i tried lookin though all the sides and multiple sources but i couldnt find a way to do it, and the answers i fould on stack overflow and other sites made no sense to me at all.
+    
+
     squarearea.appendChild(newSquare);
 }
 

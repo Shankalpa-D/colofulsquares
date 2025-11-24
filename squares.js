@@ -1,6 +1,8 @@
 window.onload = function() {
     var add = this.document.getElementById("add");
     add.onclick = addSquare;
+    var colorsbutton = this.document.getElementById("colors");
+    colorsbutton.onclick = changeColors;
     var squarearea = document.getElementById("squarearea");
     var squareCount = parseInt(Math.random() *21)+30
 
@@ -33,4 +35,12 @@ function addSquare() {
     newSquare.style.top = parseInt(Math.random() * 251) + "px";
     newSquare.style.backgroundColor = getRandonColor();
     squarearea.appendChild(newSquare);
+}
+
+function changeColors() {
+    // Look for all the squares and change their colors.
+    var squares = document.getElementsByClassName("square");
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = getRandonColor();
+    }
 }
